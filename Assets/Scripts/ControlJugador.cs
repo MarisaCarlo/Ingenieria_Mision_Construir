@@ -11,6 +11,12 @@ public class ControlJugador : MonoBehaviour
     [SerializeField] private float radioSensor = 0.2f;
     [SerializeField] private LayerMask capaSuelo;
 
+    [Header("Audio SFX")]
+    [SerializeField] private AudioClip sonidoSalto;
+    private AudioSource audioSource;
+
+    
+
     private Rigidbody2D rb;
     private Animator anim; // <-- 1. VARIABLE DECLARADA
     private float inputHorizontal;
@@ -83,4 +89,6 @@ public class ControlJugador : MonoBehaviour
             Gizmos.DrawWireSphere(sensorSuelo.position, radioSensor);
         }
     }
+
+    
 }
